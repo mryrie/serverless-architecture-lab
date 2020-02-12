@@ -48,6 +48,11 @@ namespace TollBooth
                 //licensePlates = new List<LicensePlateDataDocument>();
             }
 
+            _log.LogInformation($"Cosmos Endpoint URL: {_endpointUrl}");
+            _log.LogInformation($"Cosmos Key: {_authorizationKey}");
+            _log.LogInformation($"Cosmos Database ID: {_databaseId}");
+            _log.LogInformation($"Cosmos Collection ID: {_collectionId}");
+
             exportedCount = licensePlates.Count();
             _log.LogInformation($"{exportedCount} license plates found that are ready for export");
             return licensePlates;
